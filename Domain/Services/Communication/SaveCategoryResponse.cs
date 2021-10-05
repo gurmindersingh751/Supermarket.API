@@ -2,19 +2,19 @@
 
 namespace Supermarket.API.Domain.Services.Communication
 {
-    public class SaveCategoryResponse : BaseResponse
+    public class CategoryResponse : BaseResponse
     {
         public Category Category {  get; private set;}
 
-        private SaveCategoryResponse(bool success, string message, Category category) : base(success, message)
+        private CategoryResponse(bool success, string message, Category category) : base(success, message)
         { 
             Category = category;
         }
 
-        public SaveCategoryResponse(Category category) : this(true, string.Empty, category)
+        public CategoryResponse(Category category) : this(true, string.Empty, category)
         { }
 
-        public SaveCategoryResponse(string message) : this(false, message, null)
+        public CategoryResponse(string message) : this(false, message, null)
         { }
     }
 }

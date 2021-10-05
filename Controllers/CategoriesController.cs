@@ -69,7 +69,7 @@ namespace Supermarket.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var result = _categoryService.DeleteAsync(id);
+            var result = await _categoryService.DeleteAsync(id);
 
             if (!result.Success)
                 return BadRequest(result.Message);

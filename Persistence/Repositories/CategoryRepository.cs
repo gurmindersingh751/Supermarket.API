@@ -32,5 +32,10 @@ namespace Supermarket.API.Persistence.Repositories
         {
             return await _context.Categories.FindAsync(id);
         }
+
+        public void Remove(Category category)
+        {
+            _context.Categories.Remove(category);
+        }
     }
 }
